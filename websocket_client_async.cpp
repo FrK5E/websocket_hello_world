@@ -124,7 +124,7 @@ public:
         host_ += ':' + std::to_string(ep.port());
 
         // Perform the websocket handshake
-        ws_.async_handshake(host_, "/ws",
+        ws_.async_handshake(host_, "/",
             beast::bind_front_handler(
                 &session::on_handshake,
                 shared_from_this()));
